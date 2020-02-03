@@ -1,0 +1,211 @@
+ai:
+  enabled: true
+  epochs_per_episode: 50
+  laziness: 0.1
+  params:
+    alpha: 0.99
+    ent_coef: 0.01
+    epsilon: 1e-05
+    gamma: 0.99
+    learning_rate: 0.001
+    lr_schedule: constant
+    max_grad_norm: 0.5
+    n_steps: 1
+    tensorboard_log: ''
+    verbose: 1
+    vf_coef: 0.25
+  path: /root/brain.nn
+bettercap:
+  handshakes: /root/handshakes
+  hostname: localhost
+  password: pwnagotchi
+  port: 8081
+  scheme: http
+  silence:
+  - ble.device.new
+  - ble.device.lost
+  - ble.device.disconnected
+  - ble.device.connected
+  - ble.device.service.discovered
+  - ble.device.characteristic.discovered
+  - wifi.client.new
+  - wifi.client.lost
+  - wifi.client.probe
+  - wifi.ap.new
+  - wifi.ap.lost
+  - mod.started
+  username: pwnagotchi
+main:
+  custom_plugins: ''
+  filter: ''
+  iface: mon0
+  lang: en
+  log:
+    path: /var/log/pwnagotchi.log
+    rotation:
+      enabled: true
+      size: 10M
+  mon_max_blind_epochs: 50
+  mon_start_cmd: /usr/bin/monstart
+  mon_stop_cmd: /usr/bin/monstop
+  name: BeachBum
+  no_restart: false
+  plugins:
+    auto-update:
+      enabled: true
+      install: true
+      interval: 1
+    bt-tether:
+      devices:
+        pixel2:
+          enabled: true
+          interval: 1
+          ip: 192.168.44.44
+          mac: 48:60:5F:F5:78:EC
+          max_tries: 10
+          netmask: 24
+          priority: 1
+          scantime: 10
+          search_order: 0
+          share_internet: true
+        ios-phone:
+          enabled: false
+          interval: 5
+          ip: 172.20.10.6
+          mac: ''
+          max_tries: 0
+          netmask: 24
+          priority: 999
+          scantime: 20
+          search_order: 2
+          share_internet: false
+      enabled: true
+    gpio_buttons:
+      enabled: false
+      gpios: ''
+    gps:
+      device: /dev/ttyUSB0
+      enabled: false
+      speed: 19200
+    grid:
+      enabled: true
+      exclude:
+      - DogTailBeach
+      report: true
+    led:
+      delay: 200
+      enabled: true
+      led: 0
+      patterns:
+        ai_best_reward: oo  oo  oo oo  oo  oo  oo
+        ai_ready: oo  oo  oo oo  oo  oo  oo
+        ai_training_start: oo  oo  oo oo  oo  oo  oo
+        ai_worst_reward: oo  oo  oo oo  oo  oo  oo
+        association: oo  oo  oo oo  oo  oo  oo
+        bored: oo  oo  oo oo  oo  oo  oo
+        deauthentication: oo  oo  oo oo  oo  oo  oo
+        epoch: oo  oo  oo oo  oo  oo  oo
+        excited: oo  oo  oo oo  oo  oo  oo
+        handshake: oo  oo  oo oo  oo  oo  oo
+        loaded: oo  oo  oo oo  oo  oo  oo
+        lonely: oo  oo  oo oo  oo  oo  oo
+        peer_detected: oo  oo  oo oo  oo  oo  oo
+        peer_lost: oo  oo  oo oo  oo  oo  oo
+        ready: oo  oo  oo oo  oo  oo  oo
+        rebooting: oo  oo  oo oo  oo  oo  oo
+        sad: oo  oo  oo oo  oo  oo  oo
+        sleep: oo  oo  oo oo  oo  oo  oo
+        unread_inbox: oo  oo  oo oo  oo  oo  oo
+        updating: oo  oo  oo oo  oo  oo  oo
+        wait: oo  oo  oo oo  oo  oo  oo
+        wifi_update: oo  oo  oo oo  oo  oo  oo
+    memtemp:
+      enabled: true
+      orientation: horizontal
+      scale: celsius
+    net-pos:
+      api_key: test
+      enabled: true
+    onlinehashcrack:
+      email: michael.emans@gmail.com
+      enabled: true
+      whitelist: []
+    paw-gps:
+      enabled: false
+      ip: ''
+    session-stats:
+      enabled: true
+    webcfg:
+      enabled: true
+    webgpsmap:
+      enabled: false
+    wigle:
+      api_key: f3f77ccac75fb2a76950da76e49f5361
+      enabled: true
+    wpa-sec:
+      api_key: 5c7596bd498d9cb39aed9c6983b94dea
+      api_url: https://wpa-sec.stanev.org
+      download_results: true
+      enabled: true
+  whitelist:
+  - DogTailBeach
+  - ANOTHER_EXAMPLE_NETWORK
+  - fo:od:ba:be:fo:od
+  - fo:od:ba
+personality:
+  advertise: true
+  ap_ttl: 120
+  associate: true
+  bond_encounters_factor: 20000
+  bored_num_epochs: 15
+  channels: []
+  deauth: true
+  excited_num_epochs: 10
+  hop_recon_time: 10
+  max_inactive_scale: 2
+  max_interactions: 3
+  max_misses_for_recon: 5
+  min_recon_time: 5
+  min_rssi: -200
+  recon_inactive_multiplier: 2
+  recon_time: 30
+  sad_num_epochs: 25
+  sta_ttl: 300
+ui:
+  display:
+    color: black
+    enabled: true
+    rotation: 180
+    type: waveshare_2
+  faces:
+    angry: (-_-')
+    awake: (◕‿‿◕)
+    bored: (-__-)
+    broken: (☓‿‿☓)
+    cool: (⌐■_■)
+    debug: (#__#)
+    demotivated: (≖__≖)
+    excited: (ᵔ◡◡ᵔ)
+    friend: (♥‿‿♥)
+    grateful: (^‿‿^)
+    happy: (•‿‿•)
+    intense: (°▃▃°)
+    lonely: (ب__ب)
+    look_l: (☉_☉ )
+    look_l_happy: (◕‿◕ )
+    look_r: ( ⚆_⚆)
+    look_r_happy: ( ◕‿◕)
+    motivated: (☼‿‿☼)
+    sad: (╥☁╥ )
+    sleep: (⇀‿‿↼)
+    sleep2: (≖‿‿≖)
+    smart: (✜‿‿✜)
+  fps: 0
+  web:
+    address: 10.0.0.2
+    enabled: true
+    on_frame: ''
+    origin: ''
+    password: changeme
+    port: 8080
+    username: changeme
