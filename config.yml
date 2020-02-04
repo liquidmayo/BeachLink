@@ -129,7 +129,7 @@ main:
     onlinehashcrack:
       email: michael.emans@gmail.com
       enabled: true
-      whitelist: []
+      whitelist: [DogTailBeach]
     paw-gps:
       enabled: false
       ip: ''
@@ -149,9 +149,6 @@ main:
       enabled: true
   whitelist:
   - DogTailBeach
-  - ANOTHER_EXAMPLE_NETWORK
-  - fo:od:ba:be:fo:od
-  - fo:od:ba
 personality:
   advertise: true
   ap_ttl: 120
