@@ -1,0 +1,9 @@
+sudo bettercap -iface wlan0
+
+# this will set the interface in monitor mode and start channel hopping on all supported frequencies
+> wifi.recon on 
+# we want our APs sorted by number of clients for this attack, the default sorting would be `rssi asc`
+> set wifi.show.sort clients desc
+# every second, clear our view and present an updated list of nearby WiFi networks
+> set ticker.commands 'clear; wifi.show'
+> ticker on
