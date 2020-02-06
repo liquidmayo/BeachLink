@@ -48,7 +48,7 @@ main:
   mon_max_blind_epochs: 50
   mon_start_cmd: /usr/bin/monstart
   mon_stop_cmd: /usr/bin/monstop
-  name: BeachBum
+  name: GodLess
   no_restart: false
   plugins:
     auto-update:
